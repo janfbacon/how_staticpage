@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="author" content="Jan Bacon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="about.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <title> House of Worship Information Website - About Page </title>
+    </head>
+    <body>  
+        <div class="backgroundimg">
+            <div class="navbar">
+                <a href ="index.html"><img src="howlogo.png" alt="House of Worship Logo" class="logo"></a>
+                <a href ="index.html"><button type="button"><span></span>Back</button></a>
+            </div>
+
+            <div class="row">
+                <div class="col maincol">
+                    <h1>About the HoW Family</h1>
+                    <p>The House of Worship Family includes 18 churches from
+                        different municipalities of Negros Oriental with 2 churches
+                        on a different province. Take a peek at each of our
+                        families from different churches.
+                    </p>
+                </div>
+                <div class="col cardcol">
+                    <div class="card carddanao">                        
+                        <h5>Danao Church</h5>
+                        <img src="carddanao.jpg" alt="Danao Church">
+                    </div>
+                    <div class="card cardmanseje">
+                        <h5>Manseje Church</h5>
+                        <img src="cardmanseje.jpg" alt="Manseje Church">
+                    </div>
+                    <div class="card cardoldfab">
+                        <h5>Old Fabrica Church</h5>
+                        <img src="cardoldfab.jpeg" alt="Oldfab Church">
+                    </div>
+                    <div class="card cardsamac">
+                        <h5>Samac Church</h5>
+                        <img src="cardsamac.jpg" alt="Samac Church">
+                    </div>
+                    <div class="card cardmanj">
+                        <h5>Manjuyod Church</h5>
+                        <img src="cardmanj.jpg" alt="Manjuyod Church">
+                    </div>
+                    <div class="card cardtubod">
+                        <h5>Tubod Church</h5>
+                        <img src="cardtubod.jpg" alt="Tubod Church">
+                    </div>
+                    <div class="card cardmalaga">
+                        <h5>Malaga Church</h5>
+                        <img src="cardmalaga.jpg" alt="Malaga Church">
+                    </div>
+                    <div class="card cardmain">
+                        <h5>Main Church</h5>
+                        <img src="cardmain.jpg" alt="Main Church">
+                    </div>
+
+                    <div class="popupcard">
+                        <span>&times;</span>
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.cardcol img').forEach(card => {
+                card.onclick = () => {
+                    document.querySelector('.popupcard').style.display = 'block';
+                    document.querySelector('.popupcard img').src = card.getAttribute('src');
+                }
+            });
+
+            document.querySelector('.popupcard span').onclick = () => {
+                document.querySelector('.popupcard').style.display = 'none';
+            }
+        </script>
+    </body>
+</html>
